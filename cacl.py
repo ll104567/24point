@@ -2,6 +2,20 @@
 
 from itertools import permutations
 
+def checklisteq(r1):
+    # if len(r1) != len(r2):
+    #     return False
+    #
+    # r11 = [list(x) for x in list(permutations(r1))]
+    # for r in r11:
+    #     if r == r2:
+    #         return True
+    # return False
+
+    return [list(x) for x in list(permutations(r1,len(r1)))]
+
+
+
 
 def recursion(res,ops):
     if len(res[0]) == 1:
@@ -38,11 +52,22 @@ def recursion(res,ops):
 
 
     # del exlucedict
-    return recursion(result, ops)
+    result_rpt = list()
+    for  x in result:
+        tmplist = checklisteq(x)
+        flag = False
+        for t in tmplist:
+            if t in result_rpt:
+                flag = True
+
+        if flag == False:
+            result_rpt.append(x)
+
+    return recursion(result_rpt, ops)
 
 
 def main():
-    number = [["5", "5", "6", "6"]]
+    number = [["6", "6", "2", "2"]]
     #number = [["3", "8", "4", "6"]]
     #number = [["2", "7", "3", "4"]]
 
@@ -67,9 +92,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
-
-
-
-
-
