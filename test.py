@@ -53,8 +53,6 @@ if __name__ == '__main__':
     #answer = random.randint(1,100)
     #print answer
 
-    #ops增加
-
     cal = Test24Cacl(numbers,ops,m, answer)
     #cal.test_permut()
     cal.test_recursion()
