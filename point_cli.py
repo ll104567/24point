@@ -19,19 +19,21 @@ def check(number):
             return False
     return True
 
-if len(sys.argv) == 5:
-    number = sys.argv[1:]
+if __name__ == '__main__':
 
-elif len(sys.argv) == 2:
-    number = list(sys.argv[1])
+    if len(sys.argv) == 5:
+        number = sys.argv[1:]
 
-else:
-    print_help()
+    elif len(sys.argv) == 2:
+        number = list(sys.argv[1])
 
-if check(number):
-    point(number)
-else:
-    print_help()
+    else:
+        print_help()
+
+    if check(number):
+        point(number)
+    else:
+        print_help()
 
 
 
