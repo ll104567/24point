@@ -6,4 +6,5 @@
 - point.py
 -----
 - point_cli.py
-![point_cli.py](image/point_cli.png)
+-----
+![point_cli.py](./image/point_cli.jpg)
